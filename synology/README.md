@@ -31,7 +31,6 @@ bash /volume1/public/download_m3u.sh satip.mydomain.com
 
 The script will save the modified `*.m3u` file to `/volume1/web/satip.m3u`. If [WebStation](https://kb.synology.com/en-global/DSM/help/WebStation/application_webserv_desc) is running with its default setup, the file should then be available at [http://yoursynology.domain/satip.m3u](http://yoursynology.domain/satip.m3u).
 
-
 ## Test
 
 To run the script once, select it in the task list and click the `Run`button in the header:
@@ -42,4 +41,5 @@ To check, if the file is generated correctly, use a web browser and access the f
 
 ## TODO
 
+- check and possibly fix uid:gid
 - maybe also download the EPG data...?
