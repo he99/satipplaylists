@@ -18,9 +18,27 @@ does the following things:
 
 ## Install on synology
 
-Go to `Control Panel` > `Task Scheduler` and select `Create` > `Scheduled Task` > `User-defined Script`:
+To install the script, copy it to `/volume1/public/` (or wherever you want).
 
-To publish the file over http/https, publish it through [WebStation](https://kb.synology.com/en-global/DSM/help/WebStation/application_webserv_desc) (you might need to install it, if not already installed).
+Go to `Control Panel` > `Task Scheduler` and select `Create` > `Scheduled Task` > `User-defined Script`, then setup
+how you want to run it (I'll run it weekly to catach the latest updates). Run the userdefined script as follows (replace `satip.mydomain.com` with the hostname of your Sat>IP server):
+
+```bash
+bash /volume1/public/download_m3u.sh satip.mydomain.com
+```
+
+![task-settings](task-settings.png)
+
+The script will save the modified `*.m3u` file to `/volume1/web/satip.m3u`. If [WebStation](https://kb.synology.com/en-global/DSM/help/WebStation/application_webserv_desc) is running with its default setup, the file should then be available at [http://yoursynology.domain/satip.m3u](http://yoursynology.domain/satip.m3u).
+
+
+## Test
+
+To run the script once, select it in the task list and click the `Run`button in the header:
+
+![task-settings](task-list.png)
+
+To check, if the file is generated correctly, use a web browser and access the file at [http://yoursynology.domain/satip.m3u](http://yoursynology.domain/satip.m3u).
 
 ## TODO
 
