@@ -22,3 +22,6 @@ Go to `Control Panel` > `Task Scheduler` and select `Create` > `Scheduled Task` 
 
 To publish the file over http/https, publish it through [WebStation](https://kb.synology.com/en-global/DSM/help/WebStation/application_webserv_desc) (you might need to install it, if not already installed).
 
+## TODO
+
+- maybe also download the EPG data...?
