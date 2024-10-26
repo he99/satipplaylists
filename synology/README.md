@@ -11,7 +11,7 @@ automatically search/replace the `sat.ip` hostname with my Telestar Digbit Twin'
 The script can be run on the Synology as a scheduled task (either once on maybe every Month) and mainly
 does the following things:
 
-- download the current Astra192e m3u list from (https://github.com/dersnyke/satipplaylists/)[https://github.com/dersnyke/satipplaylists], the actual link is (satip_astra192e.m3u)[https://github.com/dersnyke/satipplaylists/raw/refs/heads/main/satip_astra192e.m3u]
+- download the current Astra192e m3u list from [https://github.com/dersnyke/satipplaylists/](https://github.com/dersnyke/satipplaylists), the actual link is [satip_astra192e.m3u](https://github.com/dersnyke/satipplaylists/raw/refs/heads/main/satip_astra192e.m3u)
 - run sed to replace all `rtsp://sat.ip` urls with the first command line argument (see below on how to set this up)
 - copy the modified `*.m3u` file to `volume1/web/` to be published through WebStation
 - change the owner to `http:http` so the file is accessible
@@ -43,3 +43,18 @@ To check, if the file is generated correctly, use a web browser and access the f
 
 - check and possibly fix uid:gid
 - maybe also download the EPG data...?
+
+## Hints & Notes
+
+### Configure TvHeadend with TeleStar DigiBit Twin
+
+See [Install TVHeadend](./INSTALL-TVHeadend.md) about how to configure TVHeadend for use with this `*.m3u` playlist and TVHeadend.
+
+### Setup Kodi to connect to TVHeadend
+
+_TODO_
+
+### Other options
+
+- [NextPVR](https://www.nextpvr.com/index.html), [GitHub NextPVR](https://github.com/sub3/NextPVR), [Kodi NextPVR plugin](https://github.com/kodi-pvr/pvr.nextpvr)
+- [Cabernet](https://cabernetwork.github.io/), [GitHub Cabernet](https://github.com/cabernetwork/cabernet)
